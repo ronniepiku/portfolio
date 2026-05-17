@@ -9,9 +9,9 @@ test.describe('Portfolio smoke tests', () => {
   test('navigation links are visible on desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto('/');
-    await expect(page.getByRole('link', { name: 'Skills' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Experience' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Projects' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Skills' }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Experience' }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Projects' }).first()).toBeVisible();
   });
 
   test('skills section renders all categories', async ({ page }) => {
