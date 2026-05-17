@@ -56,7 +56,7 @@ src/
    - Run Playwright smoke tests
    - Deploy to GitHub Pages on merge to `main`
 
-Your site will be live at `https://<username>.github.io/<repo>/`.
+Site will be live at `https://ronniepiku.github.io/portfolio/`.
 
 ## Adding Content
 
