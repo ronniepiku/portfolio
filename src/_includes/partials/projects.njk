@@ -1,0 +1,41 @@
+<section id="projects" class="py-20 sm:py-24 bg-surface-800/30" aria-labelledby="projects-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="projects-heading" class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
+      Featured Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for project in projects %}
+        <article class="bg-surface-800 rounded-xl border border-surface-700/50 hover:border-brand-500/40 transition-all hover:-translate-y-1 flex flex-col">
+          <div class="p-6 flex-1">
+            <h3 class="text-lg font-semibold text-white mb-2">
+              <a href="{{ project.links.caseStudy }}" class="hover:text-brand-400 transition-colors">
+                {{ project.title }}
+              </a>
+            </h3>
+            <p class="text-sm text-gray-400 leading-relaxed mb-4">{{ project.description }}</p>
+            <div class="flex flex-wrap gap-1.5">
+              {% for tag in project.tags %}
+                <span class="px-2 py-0.5 text-xs bg-surface-700 text-brand-300 rounded">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex gap-3 border-t border-surface-700/50 mt-auto">
+            <a href="{{ project.links.caseStudy }}" class="text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors">
+              Read More →
+            </a>
+            {% if project.links.github %}
+              <a href="{{ project.links.github }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors" aria-label="View {{ project.title }} on GitHub">
+                GitHub ↗
+              </a>
+            {% endif %}
+            {% if project.links.colab %}
+              <a href="{{ project.links.colab }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors" aria-label="Open {{ project.title }} in Colab">
+                Colab ↗
+              </a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

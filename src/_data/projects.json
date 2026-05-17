@@ -1,0 +1,33 @@
+[
+  {
+    "title": "F1 Performance Statistics Pipeline",
+    "slug": "f1-performance-pipeline",
+    "description": "Python-based analytics platform replacing a legacy system, saving £100k+ annually with 30% faster queries.",
+    "tags": ["Python", "SQL", "Data Pipelines", "Plotly"],
+    "links": {
+      "caseStudy": "/projects/f1-performance-pipeline/",
+      "github": "https://github.com/ronaldp/f1-perf-pipeline"
+    }
+  },
+  {
+    "title": "Real-Time ML Detection System",
+    "slug": "ml-detection-system",
+    "description": "End-to-end computer vision pipeline for live sports coverage, achieving state-of-the-art detection at 10x cost reduction.",
+    "tags": ["Machine Learning", "Computer Vision", "Docker", "CI/CD"],
+    "links": {
+      "caseStudy": "/projects/ml-detection-system/",
+      "github": "https://github.com/ronaldp/ml-detection",
+      "colab": "https://colab.research.google.com/drive/example"
+    }
+  },
+  {
+    "title": "Agentic Workflow Orchestration",
+    "slug": "agentic-workflows",
+    "description": "Exploration of LLM-based agentic systems for automating analytical workflows and reporting.",
+    "tags": ["Agentic Workflows", "Python", "NLP", "LLMs"],
+    "links": {
+      "caseStudy": "/projects/agentic-workflows/",
+      "github": "https://github.com/ronaldp/agentic-workflows"
+    }
+  }
+]

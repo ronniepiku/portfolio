@@ -1,0 +1,49 @@
+<header class="fixed top-0 left-0 right-0 z-40 bg-surface-900/80 backdrop-blur-md border-b border-surface-700/50">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="text-lg font-bold text-white hover:text-brand-400 transition-colors" aria-label="Home">
+        RP<span class="text-brand-500">.</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="hidden md:flex items-center gap-8" role="list">
+        {% for link in site.navLinks %}
+          <li>
+            <a href="{{ link.href }}" class="text-sm text-gray-300 hover:text-brand-400 transition-colors">
+              {{ link.text }}
+            </a>
+          </li>
+        {% endfor %}
+        <li>
+          <a href="/assets/cv.pdf" class="px-4 py-2 text-sm font-medium bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors" download>
+            Download CV
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile toggle -->
+      <button id="nav-toggle" class="md:hidden p-2 text-gray-300 hover:text-white" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <ul id="nav-menu" class="hidden md:hidden pb-4 space-y-2" role="list">
+      {% for link in site.navLinks %}
+        <li>
+          <a href="{{ link.href }}" class="block px-3 py-2 text-gray-300 hover:text-brand-400 hover:bg-surface-800 rounded-lg transition-colors">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+      <li>
+        <a href="/assets/cv.pdf" class="block px-3 py-2 text-brand-400 font-medium" download>
+          Download CV
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="h-16" aria-hidden="true"></div>

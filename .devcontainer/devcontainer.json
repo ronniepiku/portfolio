@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "site",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-playwright.playwright"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "npm ci"
+}

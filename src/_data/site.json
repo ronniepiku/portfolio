@@ -1,0 +1,13 @@
+{
+  "title": "Ronald P | Data Analyst & ML Engineer",
+  "description": "Performance data analyst and ML engineer — Python, SQL, Machine Learning, Data Science",
+  "url": "https://ronaldp.github.io",
+  "author": "Ronald P",
+  "navLinks": [
+    { "text": "Skills", "href": "#skills" },
+    { "text": "Experience", "href": "#experience" },
+    { "text": "Education", "href": "#education" },
+    { "text": "Projects", "href": "#projects" },
+    { "text": "Contact", "href": "#contact" }
+  ]
+}
