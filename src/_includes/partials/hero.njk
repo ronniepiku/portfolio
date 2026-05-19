@@ -1,24 +1,51 @@
 <section class="relative overflow-hidden py-24 sm:py-32 lg:py-40">
+  <!-- Animated background gradient -->
   <div class="absolute inset-0 bg-gradient-to-br from-brand-950/40 via-surface-900 to-surface-900" aria-hidden="true"></div>
+  
+  <!-- Floating elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl" style="animation: float 6s ease-in-out infinite;"></div>
+  </div>
+  
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl">
-      <p class="text-brand-400 font-mono text-sm mb-4 tracking-wider">Hi, I'm</p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-        Ronald P<span class="text-brand-500">.</span>
-      </h1>
-      <p class="text-xl sm:text-2xl text-gray-300 font-medium mb-4">
-        Performance Data Analyst & ML Engineer
+      <p class="text-brand-400 font-mono text-sm mb-4 tracking-wider reveal" style="animation: fadeInUp 0.6s ease-out;">
+        Hi, I'm
       </p>
-      <p class="text-base sm:text-lg text-gray-400 max-w-2xl mb-8 leading-relaxed">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 reveal" style="animation: fadeInUp 0.6s ease-out 0.2s both;">
+        Ronald <span class="gradient-text">Piku</span><span class="text-brand-500">.</span>
+      </h1>
+      <div class="text-xl sm:text-2xl text-gray-300 font-medium mb-4 h-8 reveal" style="animation: fadeInUp 0.6s ease-out 0.4s both;">
+        <span id="typed-text">Performance Data Analyst & ML Engineer</span>
+        <span class="inline-block w-0.5 h-6 bg-brand-500 ml-1 animate-pulse"></span>
+      </div>
+      <p class="text-base sm:text-lg text-gray-400 max-w-2xl mb-8 leading-relaxed reveal" style="animation: fadeInUp 0.6s ease-out 0.6s both;">
         Delivering pre-event preparation, real-time decision support, and structured post-event reviews in Formula 1. Building intelligent data systems with Python, SQL, and machine learning.
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#projects" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-lg transition-colors">
+      <div class="flex flex-wrap gap-4 reveal" style="animation: fadeInUp 0.6s ease-out 0.8s both;">
+        <a href="#projects" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg btn-primary shadow-lg shadow-brand-600/30 hover:shadow-xl hover:shadow-brand-600/40 hover:scale-105 transition-all duration-300">
           View Projects
         </a>
-        <a href="#contact" class="px-6 py-3 border border-surface-600 hover:border-brand-500 text-gray-300 hover:text-white rounded-lg transition-colors">
+        <a href="#contact" class="px-8 py-4 glass text-gray-200 hover:text-white font-semibold rounded-lg hover:bg-surface-700/60 transition-all duration-300">
           Get in Touch
         </a>
+      </div>
+      
+      <!-- Stats or highlights -->
+      <div class="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-surface-700/50 reveal" style="animation: fadeInUp 0.6s ease-out 1s both;">
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-brand-400 mb-1">5+</div>
+          <div class="text-xs sm:text-sm text-gray-500">Years Experience</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-brand-400 mb-1">20+</div>
+          <div class="text-xs sm:text-sm text-gray-500">Projects Delivered</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-brand-400 mb-1">£100k+</div>
+          <div class="text-xs sm:text-sm text-gray-500">Cost Savings</div>
+        </div>
       </div>
     </div>
   </div>

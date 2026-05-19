@@ -20,22 +20,124 @@
 }
 
 @layer components {
+
+  /* Animated gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #3b8eff 0%, #8ecdff 50%, #3b8eff 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(30, 34, 46, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 205, 255, 0.1);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 142, 255, 0.3);
+  }
+
+  /* Scroll reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Scroll progress bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b8eff, #8ecdff);
+    transform-origin: left;
+    z-index: 100;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Button ripple effect */
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease-out;
+  }
+
+  .btn-primary:hover::before {
+    transform: scale(2);
+  }
+
+  /* Skill bar animation */
+  .skill-bar {
+    position: relative;
+    height: 4px;
+    background: theme('colors.surface.700');
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .skill-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #3b8eff, #8ecdff);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .skill-bar.animate::after {
+    width: var(--skill-level, 85%);
+  }
+
   /* Prose overrides for case study content */
   .prose-brand a {
     color: theme('colors.brand.400');
     text-decoration: underline;
     text-underline-offset: 2px;
   }
+
   .prose-brand a:hover {
     color: theme('colors.brand.300');
   }
+
   .prose-brand h2 {
     color: white;
     margin-top: 2em;
   }
+
   .prose-brand h3 {
     color: theme('colors.gray.100');
   }
+
   .prose-brand code {
     color: theme('colors.brand.300');
     background: theme('colors.surface.700');
@@ -43,11 +145,13 @@
     border-radius: 0.25rem;
     font-size: 0.875em;
   }
+
   .prose-brand pre {
     background: theme('colors.surface.800');
     border: 1px solid theme('colors.surface.600');
     border-radius: 0.75rem;
   }
+
   .prose-brand img {
     border-radius: 0.75rem;
     border: 1px solid theme('colors.surface.600');
@@ -58,7 +162,77 @@
   .animation-delay-200 {
     animation-delay: 200ms;
   }
+
   .animation-delay-400 {
     animation-delay: 400ms;
   }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Keyframe animations */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 142, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(59, 142, 255, 0.6);
+  }
+}
+
+/* Active navigation link */
+.active-nav {
+  color: #3b8eff !important;
+  position: relative;
+}
+
+.active-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b8eff, #8ecdff);
 }

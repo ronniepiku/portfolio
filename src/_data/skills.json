@@ -2,46 +2,101 @@
   {
     "category": "Languages & Frameworks",
     "items": [
-      { "name": "Python", "icon": "🐍" },
-      { "name": "SQL", "icon": "🗄️" },
-      { "name": "pandas / NumPy", "icon": "📊" },
-      { "name": "Plotly", "icon": "📈" }
+      {
+        "name": "Python",
+        "icon": "🐍",
+        "level": 95
+      },
+      {
+        "name": "SQL",
+        "icon": "🗄️",
+        "level": 90
+      },
+      {
+        "name": "pandas / NumPy",
+        "icon": "📊",
+        "level": 92
+      },
+      {
+        "name": "Plotly",
+        "icon": "📈",
+        "level": 88
+      }
     ]
   },
   {
     "category": "Machine Learning & AI",
     "items": [
-      { "name": "Computer Vision", "icon": "👁️" },
-      { "name": "NLP", "icon": "💬" },
-      { "name": "Statistical Modelling", "icon": "📐" },
-      { "name": "ML Libraries (scikit-learn, PyTorch)", "icon": "🤖" }
+      {
+        "name": "Computer Vision",
+        "icon": "👁️",
+        "level": 85
+      },
+      {
+        "name": "NLP",
+        "icon": "💬",
+        "level": 80
+      },
+      {
+        "name": "Statistical Modelling",
+        "icon": "📐",
+        "level": 87
+      },
+      {
+        "name": "ML Libraries (scikit-learn, PyTorch)",
+        "icon": "🤖",
+        "level": 90
+      }
     ]
   },
   {
     "category": "Data & Analytics",
     "items": [
-      { "name": "Data Analysis & Visualisation", "icon": "📉" },
-      { "name": "Data Pipelines", "icon": "🔁" },
-      { "name": "Performance Reporting", "icon": "📋" },
-      { "name": "Trend Identification", "icon": "🔍" }
+      {
+        "name": "Data Analysis & Visualisation",
+        "icon": "📉",
+        "level": 93
+      },
+      {
+        "name": "Data Pipelines",
+        "icon": "🔁",
+        "level": 88
+      },
+      {
+        "name": "Performance Reporting",
+        "icon": "📋",
+        "level": 90
+      },
+      {
+        "name": "Trend Identification",
+        "icon": "🔍",
+        "level": 85
+      }
     ]
   },
   {
     "category": "DevOps & Tools",
     "items": [
-      { "name": "Docker", "icon": "🐳" },
-      { "name": "CI/CD (GitHub Actions)", "icon": "⚙️" },
-      { "name": "Git", "icon": "🔀" },
-      { "name": "Agentic Workflows", "icon": "🤝" }
-    ]
-  },
-  {
-    "category": "Soft Skills",
-    "items": [
-      { "name": "Communication & Presentation", "icon": "🎤" },
-      { "name": "Leadership", "icon": "🏆" },
-      { "name": "Attention to Detail", "icon": "🎯" },
-      { "name": "Deadline-driven Delivery", "icon": "⏱️" }
+      {
+        "name": "Docker",
+        "icon": "🐳",
+        "level": 82
+      },
+      {
+        "name": "CI/CD (GitHub Actions)",
+        "icon": "⚙️",
+        "level": 85
+      },
+      {
+        "name": "Git",
+        "icon": "🔀",
+        "level": 90
+      },
+      {
+        "name": "Agentic Workflows",
+        "icon": "🤝",
+        "level": 75
+      }
     ]
   }
 ]

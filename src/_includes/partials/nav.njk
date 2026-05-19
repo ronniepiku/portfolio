@@ -1,21 +1,22 @@
-<header class="fixed top-0 left-0 right-0 z-40 bg-surface-900/80 backdrop-blur-md border-b border-surface-700/50">
+<header class="fixed top-0 left-0 right-0 z-50 glass border-b border-surface-700/50">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="text-lg font-bold text-white hover:text-brand-400 transition-colors" aria-label="Home">
-        RP<span class="text-brand-500">.</span>
+      <a href="{{ '/' | url }}" class="text-xl font-bold text-white hover:text-brand-400 transition-all duration-300 hover:scale-105" aria-label="Home">
+        RP<span class="text-brand-500 animate-pulse">.</span>
       </a>
 
       <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-8" role="list">
         {% for link in site.navLinks %}
           <li>
-            <a href="{{ link.href }}" class="text-sm text-gray-300 hover:text-brand-400 transition-colors">
+            <a href="{{ link.href }}" class="text-sm font-medium text-gray-300 hover:text-brand-400 transition-all duration-300 relative py-2 group">
               {{ link.text }}
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all duration-300"></span>
             </a>
           </li>
         {% endfor %}
         <li>
-          <a href="/assets/cv.pdf" class="px-4 py-2 text-sm font-medium bg-brand-600 hover:bg-brand-700 text-white rounded-lg transition-colors" download>
+          <a href="{{ '/assets/cv.pdf' | url }}" class="px-4 py-2 text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white rounded-lg btn-primary shadow-lg shadow-brand-600/20 hover:shadow-xl hover:shadow-brand-600/30 hover:scale-105 transition-all duration-300" download>
             Download CV
           </a>
         </li>

@@ -1,10 +1,10 @@
 module.exports = function (eleventyConfig) {
   // Pass through static assets
   eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy('src/css');
 
-  // Watch CSS for changes
+  // Watch CSS and JS for changes
   eleventyConfig.addWatchTarget('src/css/');
+  eleventyConfig.addWatchTarget('src/assets/js/');
 
   // Custom filter: format date
   eleventyConfig.addFilter('dateFormat', (value) => {
@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('year', () => new Date().getFullYear());
 
   return {
+    pathPrefix: '/portfolio/',
     dir: {
       input: 'src',
       output: '_site',

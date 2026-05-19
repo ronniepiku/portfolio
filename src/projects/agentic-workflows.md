@@ -53,5 +53,5 @@ This is an active research project within my MSc programme. Key areas of investi
 
 ## Links
 
-- [GitHub Repository](https://github.com/ronaldp/agentic-workflows) — Framework code and example workflows
+- [GitHub Repository](https://github.com/ronniepiku/agentic-workflows) — Framework code and example workflows
 - Research paper in progress (expected 2026)

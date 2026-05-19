@@ -1,36 +1,63 @@
 <section id="projects" class="py-20 sm:py-24 bg-surface-800/30" aria-labelledby="projects-heading">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="projects-heading" class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
+    <h2 id="projects-heading" class="text-2xl sm:text-3xl font-bold text-white mb-4 text-center reveal">
       Featured Projects
     </h2>
+    <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto reveal">
+      Real-world solutions delivering measurable impact in Formula 1 and machine learning
+    </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for project in projects %}
-        <article class="bg-surface-800 rounded-xl border border-surface-700/50 hover:border-brand-500/40 transition-all hover:-translate-y-1 flex flex-col">
-          <div class="p-6 flex-1">
-            <h3 class="text-lg font-semibold text-white mb-2">
-              <a href="{{ project.links.caseStudy }}" class="hover:text-brand-400 transition-colors">
+        <article class="reveal group bg-surface-800 rounded-xl border border-surface-700/50 hover-lift overflow-hidden flex flex-col relative">
+          <!-- Gradient overlay on hover -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-600/0 to-brand-900/0 group-hover:from-brand-600/10 group-hover:to-brand-900/20 transition-all duration-500 pointer-events-none"></div>
+          
+          <!-- Project image placeholder with icon -->
+          <div class="relative h-48 bg-gradient-to-br from-surface-700 to-surface-900 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-brand-500/5 group-hover:bg-brand-500/10 transition-colors duration-500"></div>
+            <div class="relative text-6xl opacity-20 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500">
+              {% if "ML" in project.title or "Detection" in project.title %}👁️
+              {% elif "F1" in project.title or "Performance" in project.title %}🏎️
+              {% elif "Agentic" in project.title or "Workflow" in project.title %}🤖
+              {% else %}📊{% endif %}
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col relative z-10">
+            <h3 class="text-lg font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">
+              <a href="{{ project.links.caseStudy | url }}" class="hover:text-brand-400">
                 {{ project.title }}
               </a>
             </h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-4">{{ project.description }}</p>
-            <div class="flex flex-wrap gap-1.5">
+            <p class="text-sm text-gray-400 leading-relaxed mb-4 flex-1">{{ project.description }}</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
               {% for tag in project.tags %}
-                <span class="px-2 py-0.5 text-xs bg-surface-700 text-brand-300 rounded">{{ tag }}</span>
+                <span class="px-2.5 py-1 text-xs font-medium bg-surface-700 text-brand-300 rounded-full group-hover:bg-brand-900/30 group-hover:text-brand-200 transition-all duration-300">{{ tag }}</span>
               {% endfor %}
             </div>
           </div>
-          <div class="px-6 pb-6 pt-2 flex gap-3 border-t border-surface-700/50 mt-auto">
-            <a href="{{ project.links.caseStudy }}" class="text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors">
-              Read More →
+          
+          <div class="px-6 pb-6 pt-2 flex gap-3 border-t border-surface-700/50 relative z-10">
+            <a href="{{ project.links.caseStudy | url }}" class="text-sm text-brand-400 hover:text-brand-300 font-semibold transition-colors group/link flex items-center gap-1">
+              Read More 
+              <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
             </a>
             {% if project.links.github %}
-              <a href="{{ project.links.github }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors" aria-label="View {{ project.title }} on GitHub">
-                GitHub ↗
+              <a href="{{ project.links.github }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-1" aria-label="View {{ project.title }} on GitHub">
+                GitHub
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
               </a>
             {% endif %}
             {% if project.links.colab %}
-              <a href="{{ project.links.colab }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors" aria-label="Open {{ project.title }} in Colab">
-                Colab ↗
+              <a href="{{ project.links.colab }}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-white transition-colors font-medium flex items-center gap-1" aria-label="Open {{ project.title }} in Colab">
+                Colab
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
               </a>
             {% endif %}
           </div>
