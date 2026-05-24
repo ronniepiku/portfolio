@@ -1,39 +1,38 @@
 [
   {
-    "title": "F1 Performance Statistics Pipeline",
-    "slug": "f1-performance-pipeline",
-    "description": "Python-based analytics platform replacing a legacy system, saving £100k+ annually with 30% faster queries.",
+    "title": "Towards Simulation-to-Reality Transfer in EIT Tactile Sensing",
+    "slug": "eit-sim2real",
+    "description": "Noise-augmented deep learning for sim-to-real transfer in EIT tactile sensing. Uses simulated data and domain randomisation to improve robustness, reduce data needs, and enable accurate real-world tactile reconstruction for robotic perception.",
     "tags": [
       "Python",
-      "SQL",
-      "Data Pipelines",
+      "Machine Learning",
+      "Data Science",
       "Plotly"
     ],
     "links": {
-      "caseStudy": "/projects/f1-performance-pipeline/",
-      "github": "https://github.com/ronniepiku/f1-perf-pipeline"
+      "caseStudy": "/projects/eit-sim2real/",
+      "github": "https://github.com/ronniepiku/eit-sim2real"
     }
   },
   {
-    "title": "Real-Time ML Detection System",
-    "slug": "ml-detection-system",
-    "description": "End-to-end computer vision pipeline for live sports coverage, achieving state-of-the-art detection at 10x cost reduction.",
+    "title": "MatchMind",
+    "slug": "matchmind",
+    "description": "Machine learning-driven football analysis suite for player and team performance evaluation, tactical benchmarking, competitor scouting, and advanced xG modelling using StatBoost.",
     "tags": [
       "Machine Learning",
-      "Computer Vision",
+      "Data Science",
       "Docker",
       "CI/CD"
     ],
     "links": {
-      "caseStudy": "/projects/ml-detection-system/",
-      "github": "https://github.com/ronniepiku/ml-detection",
-      "colab": "https://colab.research.google.com/drive/example"
+      "caseStudy": "/projects/matchmind/",
+      "github": "https://github.com/ronniepiku/MatchMind"
     }
   },
   {
-    "title": "Agentic Workflow Orchestration",
-    "slug": "agentic-workflows",
-    "description": "Exploration of LLM-based agentic systems for automating analytical workflows and reporting.",
+    "title": "AlphaScreen",
+    "slug": "alphascreen",
+    "description": "AlphaScreen is a state-of-the-art equity research tool embeded with your own specialised AI equity research assistant. Rank, backtest and evaluate stocks across global markets.",
     "tags": [
       "Agentic Workflows",
       "Python",
@@ -41,8 +40,7 @@
       "LLMs"
     ],
     "links": {
-      "caseStudy": "/projects/agentic-workflows/",
-      "github": "https://github.com/ronniepiku/agentic-workflows"
+      "caseStudy": "/projects/alphascreen/"
     }
   }
 ]

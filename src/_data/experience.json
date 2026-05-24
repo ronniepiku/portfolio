@@ -2,7 +2,7 @@
   {
     "role": "Vehicle Performance Data Analyst",
     "company": "Alpine Formula One Team",
-    "period": "June 2025 – Present",
+    "period": "Jun 2025 - Present",
     "highlights": [
       "Deliver pre-race and post-race performance analysis to drivers and senior engineering leadership, identifying setup trends and strategic opportunities that contributed to a 95% available-point conversion ratio.",
       "Build and maintain automated analysis tools in Python and SQL to support real-time trackside decision-making and post-event review workflows, reducing analyst turnaround time by 80%.",
@@ -13,7 +13,37 @@
   {
     "role": "Machine Learning Engineer",
     "company": "Pineamite",
-    "period": "Aug 2023 – Oct 2024",
+    "period": "Feb 2023 - Oct 2024",
+    "highlights": [
+      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
+      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
+      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
+    ]
+  },
+  {
+    "role": "Engineering Teacher",
+    "company": "Summer Boarding Courses",
+    "period": "Jun 2023 - Aug 2023",
+    "highlights": [
+      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
+      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
+      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
+    ]
+  },
+  {
+    "role": "Career Break",
+    "company": "N/A",
+    "period": "Feb 2023 - Jun 2023",
+    "highlights": [
+      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
+      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
+      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
+    ]
+  },
+  {
+    "role": "Commodities Broker",
+    "company": "Veblen Collectables",
+    "period": "Aug 2021 - Feb 2023",
     "highlights": [
       "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
       "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",

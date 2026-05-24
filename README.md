@@ -46,7 +46,7 @@ src/
 
 ## Deployment
 
-### GitHub Pages (recommended)
+### GitHub Pages
 
 1. Push code to `main` branch
 2. Go to repo **Settings → Pages → Source** → set to "GitHub Actions"
@@ -86,56 +86,6 @@ Edit the JSON files in `src/_data/`:
 ### CV PDF
 
 Place your PDF at `src/assets/cv.pdf`. It will be served at `/assets/cv.pdf`.
-
-## Local Dev with Docker
-
-```bash
-docker compose up
-```
-
-Or use VS Code's Dev Containers extension — the `.devcontainer/` config is included.
-
-## Code Quality
-
-- **Formatting**: Prettier (enforced in CI)
-- **Testing**: Playwright smoke tests for critical UI
-- **Accessibility**: WCAG AA compliance (skip links, ARIA labels, focus management, semantic HTML)
-- **Performance**: Minimal JS, optimised CSS, system font stack with web font swap
-
-## Repository Conventions
-
-### Branching
-
-- `main` — production, deploys automatically
-- `feature/*` — feature branches, open PR to `main`
-- `fix/*` — bug fix branches
-
-### Commit Messages
-
-Follow [Conventional Commits](https://www.conventionalcommits.org/):
-```
-feat: add new project case study
-fix: correct mobile nav z-index
-docs: update deployment instructions
-style: reformat templates
-ci: update Node version in workflow
-test: add accessibility smoke test
-```
-
-### Pull Requests
-
-- Keep PRs small and focused
-- CI must pass before merge
-- Use squash merge for clean history
-
-## Lighthouse Targets
-
-| Category | Target |
-|----------|--------|
-| Performance | ≥ 90 |
-| Accessibility | ≥ 90 |
-| Best Practices | ≥ 90 |
-| SEO | ≥ 90 |
 
 ## License
 

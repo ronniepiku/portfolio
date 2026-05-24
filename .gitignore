@@ -7,3 +7,5 @@ dist/
 Thumbs.db
 test-results/
 playwright-report/
+
+cv.pdf
