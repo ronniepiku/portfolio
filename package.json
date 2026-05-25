@@ -12,7 +12,7 @@
     "format:check": "prettier --check \"**/*.{js,json,md,njk,css}\"",
     "test": "npx playwright test",
     "test:install": "npx playwright install --with-deps chromium",
-    "clean": "rm -rf _site"
+    "clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

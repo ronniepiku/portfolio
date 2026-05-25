@@ -13,7 +13,7 @@ test.describe('Portfolio smoke tests', () => {
     await page.goto('/');
     const skillsSection = page.locator('#skills');
     await expect(skillsSection).toBeVisible();
-    await expect(skillsSection.getByText('Languages & Frameworks')).toBeVisible();
+    await expect(skillsSection.getByText('Programming & Data Stack')).toBeVisible();
     await expect(skillsSection.getByText('Machine Learning & AI')).toBeVisible();
     await expect(skillsSection.getByText('DevOps & Tools')).toBeVisible();
   });
@@ -26,9 +26,15 @@ test.describe('Portfolio smoke tests', () => {
 
   test('project cards link to case studies', async ({ page }) => {
     await page.goto('/');
-    const projectLink = page.getByRole('link', { name: 'F1 Performance Statistics Pipeline', exact: true });
+    const projectLink = page.getByRole('link', { name: 'MatchMind', exact: true });
     await expect(projectLink).toBeVisible();
-    await expect(projectLink).toHaveAttribute('href', '/portfolio/projects/f1-performance-pipeline/');
+    await expect(projectLink).toHaveAttribute('href', '/portfolio/projects/matchmind/');
+  });
+
+  test('case study header nav returns to homepage sections', async ({ page }) => {
+    await page.goto('/portfolio/projects/matchmind/');
+    const projectsNavLink = page.getByRole('link', { name: 'Projects' }).first();
+    await expect(projectsNavLink).toHaveAttribute('href', '/portfolio/#projects');
   });
 
   test('skip link is accessible', async ({ page }) => {
@@ -52,6 +58,14 @@ test.describe('Portfolio smoke tests', () => {
     await page.goto('/');
     const cvLink = page.getByRole('link', { name: 'Download CV' }).first();
     await expect(cvLink).toBeVisible();
+    await expect(cvLink).toHaveAttribute('href', '/portfolio/assets/cv.pdf');
+  });
+
+  test('mobile CV download link uses prefixed asset path', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/');
+    await page.locator('#nav-toggle').click();
+    const cvLink = page.getByRole('link', { name: 'Download CV' }).last();
     await expect(cvLink).toHaveAttribute('href', '/portfolio/assets/cv.pdf');
   });
 });

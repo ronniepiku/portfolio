@@ -1,5 +1,23 @@
 // Portfolio Interactive Features
 
+function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function getAnchorTarget(link) {
+    const href = link.getAttribute('href');
+    if (!href) {
+        return null;
+    }
+
+    const hashIndex = href.indexOf('#');
+    if (hashIndex === -1) {
+        return null;
+    }
+
+    return href.slice(hashIndex);
+}
+
 // Scroll Progress Bar
 function initScrollProgress() {
     const progressBar = document.createElement('div');
@@ -41,14 +59,13 @@ function initScrollReveal() {
 // Active Navigation Highlighting
 function initActiveNav() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('nav a[href*="#"]');
 
     window.addEventListener('scroll', () => {
         let current = '';
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (window.scrollY >= (sectionTop - 100)) {
                 current = section.getAttribute('id');
             }
@@ -56,7 +73,7 @@ function initActiveNav() {
 
         navLinks.forEach(link => {
             link.classList.remove('active-nav');
-            if (link.getAttribute('href').slice(1) === current) {
+            if (getAnchorTarget(link) === `#${current}`) {
                 link.classList.add('active-nav');
             }
         });
@@ -65,11 +82,24 @@ function initActiveNav() {
 
 // Smooth Scroll with Offset
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetSelector = getAnchorTarget(this);
+            if (!targetSelector) {
+                return;
+            }
+
+            const currentPage = `${window.location.pathname}${window.location.search}`;
+            const targetUrl = new URL(this.href, window.location.origin);
+            const targetPage = `${targetUrl.pathname}${targetUrl.search}`;
+
+            if (targetPage !== currentPage) {
+                return;
+            }
+
+            const target = document.querySelector(targetSelector);
             if (target) {
+                e.preventDefault();
                 const offsetTop = target.offsetTop - 80; // Account for fixed header
                 window.scrollTo({
                     top: offsetTop,
@@ -82,14 +112,18 @@ function initSmoothScroll() {
 
 // Typing Animation for Hero
 function initTypingAnimation() {
+    if (prefersReducedMotion()) return;
+
     const element = document.getElementById('typed-text');
     if (!element) return;
 
     const texts = [
-        'Performance Data Analyst & ML Engineer',
-        'Python & SQL Specialist',
         'Machine Learning Engineer',
-        'Data Visualization Expert'
+        'Applied AI & Data Systems',
+        'Python, SQL, and ML Tooling',
+        'Decision-Focused Analytics',
+        'Machine Learning Engineer',
+        'From Research to Production'
     ];
 
     let textIndex = 0;
@@ -134,6 +168,8 @@ function initTypingAnimation() {
 
 // Parallax Effect for Hero Background
 function initParallax() {
+    if (prefersReducedMotion()) return;
+
     const hero = document.querySelector('section');
     if (!hero) return;
 
@@ -172,6 +208,8 @@ function initMobileNav() {
 
 // Add cursor glow effect
 function initCursorGlow() {
+    if (prefersReducedMotion()) return;
+
     const glow = document.createElement('div');
     glow.className = 'fixed pointer-events-none w-96 h-96 rounded-full bg-brand-500/5 blur-3xl transition-all duration-500 -translate-x-1/2 -translate-y-1/2 hidden lg:block';
     glow.style.zIndex = '0';

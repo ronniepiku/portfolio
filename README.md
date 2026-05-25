@@ -68,8 +68,12 @@ Site will be live at `https://ronniepiku.github.io/portfolio/`.
    ---
    layout: layouts/case-study.njk
    title: "Project Title"
+   subtitle: "Optional subtitle"
+   storyHook: "Optional story-first intro"
    tags: ["Python", "ML"]
-   colab: "https://colab.research.google.com/..."  # optional
+   github: "https://github.com/..."                # optional
+   demoUrl: "https://..."                          # optional
+   heroImage: "/assets/projects/slug/cover.svg"    # optional
    ---
    ```
 3. Add entry to `src/_data/projects.json`
@@ -85,7 +89,7 @@ Edit the JSON files in `src/_data/`:
 
 ### CV PDF
 
-Place your PDF at `src/assets/cv.pdf`. It will be served at `/assets/cv.pdf`.
+Place your PDF at `src/assets/cv.pdf`. On GitHub Pages it will be served under `/portfolio/assets/cv.pdf`.
 
 ## License
 
