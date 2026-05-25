@@ -1,40 +1,84 @@
 <section id="experience" class="py-20 sm:py-24 bg-surface-800/30" aria-labelledby="experience-heading">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 id="experience-heading" class="text-2xl sm:text-3xl font-bold text-white mb-4 text-center reveal">
-      Work Experience
+      How I got here
     </h2>
     <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto reveal">
-      Building high-performance data systems and machine learning solutions in motorsport
+      From markets to machine learning systems built for real-world pressure
     </p>
+
     <div class="relative">
-      <!-- Animated timeline line -->
-      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brand-500 via-brand-600 to-surface-600 hidden sm:block" aria-hidden="true"></div>
+      <div class="absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brand-500 via-brand-500/60 to-surface-600" aria-hidden="true"></div>
 
-      <div class="space-y-12">
+      <div class="space-y-10 sm:space-y-12">
         {% for job in experience %}
-          <div class="reveal relative sm:pl-12 group">
-            <!-- Animated timeline dot -->
-            <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-brand-500 rounded-full ring-4 ring-surface-900 group-hover:ring-brand-500/20 transition-all duration-300 hidden sm:block" style="animation: pulse-glow 2s ease-in-out infinite;" aria-hidden="true"></div>
+          <article class="reveal relative pl-10" aria-label="{{ job.role }} at {{ job.company }}">
+            <div class="absolute left-3 top-7 h-3.5 w-3.5 -translate-x-1/2 rounded-full ring-4 ring-surface-900 exp-marker {% if loop.first %}exp-marker--current{% else %}exp-marker--past{% endif %}" aria-hidden="true"></div>
 
-            <div class="bg-surface-800 rounded-xl p-6 border border-surface-700/50 hover-lift hover:border-brand-500/30">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
-                <h3 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">{{ job.role }}</h3>
-                <span class="text-sm text-gray-400 font-mono bg-surface-700/50 px-3 py-1 rounded-full">{{ job.period }}</span>
+            <time class="absolute -left-1 top-0 -translate-x-full pr-4 text-[11px] sm:text-xs text-gray-200 font-mono hidden md:block whitespace-nowrap">
+              {{ job.period.split(' - ')[0] }}
+            </time>
+
+            <div class="group bg-surface-800 rounded-2xl p-5 sm:p-6 border border-surface-700/60 transition-all duration-300 hover:border-brand-500/40 hover:shadow-[0_12px_28px_rgba(0,0,0,0.35)]">
+              <div class="mb-4">
+                <div>
+                  <p class="text-brand-300 font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-1">{{ job.company }}</p>
+                  <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-300 transition-colors">{{ job.role }}</h3>
+                </div>
+                <time class="text-xs text-gray-300 font-mono md:hidden whitespace-nowrap">
+                  {{ job.period }}
+                </time>
               </div>
-              <p class="text-brand-400 font-semibold text-base mb-4 flex items-center gap-2">
-                <span>{{ job.company }}</span>
-                <span class="text-xs text-gray-500">•</span>
-                <span class="text-sm text-gray-400 font-normal">{{ job.location or "Remote" }}</span>
+
+              <p class="text-sm text-gray-200 leading-relaxed mb-4">
+                {{ job.summary }}
               </p>
-              <ul class="space-y-2.5" role="list">
-                {% for item in job.highlights %}
-                  <li class="text-sm text-gray-300 leading-relaxed pl-5 relative before:content-['▸'] before:absolute before:left-0 before:text-brand-500 before:font-bold hover:text-white transition-colors">
-                    {{ item }}
-                  </li>
-                {% endfor %}
-              </ul>
+
+              {% if job.chapter %}
+                <p class="text-sm text-gray-300 italic leading-relaxed mb-4 border-l-2 border-brand-500/50 pl-3">
+                  {{ job.chapter }}
+                </p>
+              {% endif %}
+
+              {% if job.focus %}
+                <p class="text-sm text-gray-300 leading-relaxed mb-4 border-l-2 border-brand-500/50 pl-3">
+                  <span class="text-brand-300 font-medium">Core focus:</span> {{ job.focus }}
+                </p>
+              {% endif %}
+
+              <div class="mb-4">
+                <p class="text-xs uppercase tracking-[0.18em] text-gray-400 font-semibold mb-2">Built with</p>
+                <div class="flex flex-wrap gap-1.5">
+                  {% for tag in job.tags %}
+                    <span class="px-2.5 py-1 text-xs font-medium bg-surface-700 text-brand-300 rounded-full">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <p class="text-xs uppercase tracking-[0.18em] text-gray-400 font-semibold mb-2">Turning points</p>
+                <ul class="space-y-2.5" role="list">
+                  {% for item in job.highlights %}
+                    <li class="text-sm text-gray-300 leading-relaxed pl-5 relative before:content-['▸'] before:absolute before:left-0 before:text-brand-500 before:font-bold hover:text-white transition-colors">
+                      {{ item }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              {% if job.behindTheScenes %}
+                <details class="rounded-lg border border-surface-700/70 bg-surface-900/35 open:border-brand-500/30">
+                  <summary class="cursor-pointer list-none px-3.5 py-2.5 flex items-center justify-between text-sm text-gray-200 font-medium">
+                    Behind the scenes
+                    <span class="text-brand-300 transition-transform duration-300">+</span>
+                  </summary>
+                  <p class="px-3.5 pb-3.5 text-sm text-gray-300 leading-relaxed">
+                    {{ job.behindTheScenes }}
+                  </p>
+                </details>
+              {% endif %}
             </div>
-          </div>
+          </article>
         {% endfor %}
       </div>
     </div>

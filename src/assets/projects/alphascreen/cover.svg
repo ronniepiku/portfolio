@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AlphaScreen Cover</title>
+  <desc id="desc">Illustrative equity research workstation cover for AlphaScreen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1117"/>
+      <stop offset="100%" stop-color="#1e222e"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#59b0ff"/>
+      <stop offset="100%" stop-color="#3b8eff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="120" y="110" width="960" height="450" rx="24" fill="#161922" stroke="#3b8eff" stroke-opacity="0.5"/>
+  <rect x="160" y="160" width="300" height="320" rx="14" fill="#1e222e"/>
+  <rect x="490" y="160" width="550" height="145" rx="14" fill="#1e222e"/>
+  <rect x="490" y="325" width="550" height="155" rx="14" fill="#1e222e"/>
+  <path d="M520 430 C600 410 650 350 720 360 C790 370 850 460 940 420" stroke="url(#line)" stroke-width="6" fill="none"/>
+  <circle cx="940" cy="420" r="10" fill="#8ecdff"/>
+  <text x="120" y="620" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="700">AlphaScreen</text>
+  <text x="120" y="655" fill="#8ecdff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">AI-assisted equity research workflow</text>
+</svg>

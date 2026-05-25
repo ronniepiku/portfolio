@@ -1,53 +1,76 @@
 [
   {
-    "role": "Vehicle Performance Data Analyst",
+    "role": "Vehicle Performance Software Engineer",
     "company": "Alpine Formula One Team",
     "period": "Jun 2025 - Present",
+    "summary": "In Formula 1, every decision sits on a clock. I build performance tooling that helps engineers and analysts move from raw telemetry to confident calls before, during, and after race weekends.",
+    "focus": "Real-time analytics, race engineering decision support, and reliable reporting under tight operational deadlines.",
+    "tags": ["Python", "Plotly", "SQL", "Vehicle Dynamics", "Data Analysis", "MATLAB"],
     "highlights": [
-      "Deliver pre-race and post-race performance analysis to drivers and senior engineering leadership, identifying setup trends and strategic opportunities that contributed to a 95% available-point conversion ratio.",
-      "Build and maintain automated analysis tools in Python and SQL to support real-time trackside decision-making and post-event review workflows, reducing analyst turnaround time by 80%.",
-      "Designed and deployed a performance statistics pipeline and reporting interface in Python, replacing a legacy platform, saving over £100k annually and improving query speeds by 30%.",
-      "Operate within a demanding event calendar across 24 race weekends, delivering time-critical outputs aligned to engineering and coaching workflows."
-    ]
+      "Built agentic workflows to aid race engineers in quickly diagnosing performance issues and making informed setup decisions.",
+      "Built internal tooling that reduced analyst turnaround time and improved race-week reporting reliability.",
+      "Delivered pre-race and post-race analysis workflows that improved setup trend visibility and supported faster trackside decisions.",
+      "Replaced a legacy statistic system with a faster Python pipeline, lowering operational cost and maintenance overhead.",
+      "Built CI/CD pipelines and monitoring for critical data systems, improving reliability and reducing downtime during race weekends.",
+      "Provided event support for live data systems, ensuring smooth operation and quick issue resolution under high-pressure conditions."
+    ],
+    "behindTheScenes": "Much of the value came from reducing cognitive load under pressure. Fewer manual checks, clearer visual cues, and faster handoffs between analysis and action."
   },
   {
     "role": "Machine Learning Engineer",
     "company": "Pineamite",
-    "period": "Feb 2023 - Oct 2024",
+    "period": "Jul 2023 - Oct 2024",
+    "summary": "This was where I learned to treat ML as a product, not just a model. I built production-oriented computer vision systems that made live sports coverage faster, more cost-effective, and more dependable.",
+    "focus": "Computer vision model development, data pipeline design, and performance monitoring for live environments.",
+    "tags": ["Machine Learning", "Data Engineering", "Python", "Computer Vision", "PyTorch", "ONNX", "Cloudflare"],
     "highlights": [
-      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
-      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
-      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
-    ]
+      "Led a team of engineers to release a native application within 12 weeks through structured planning and cross-functional execution.",
+      "Built a computer vision model that improved the accuracy and reliability of live sports coverage, enhancing viewer experience while reducing operational overhead.",
+      "Designed end-to-end data pipelines that reduced live event coverage cost while maintaining reliable output quality.",
+      "Created and curated a proprietary training dataset that improved benchmarking and model iteration speed.",
+      "Introduced monitoring and performance checks that surfaced bottlenecks earlier and reduced processing latency."
+    ],
+    "behindTheScenes": "The hardest part was balancing quality and latency simultaneously. Better data curation and observability often delivered bigger wins than model tweaks alone."
   },
   {
     "role": "Engineering Teacher",
     "company": "Summer Boarding Courses",
     "period": "Jun 2023 - Aug 2023",
+    "summary": "Teaching sharpened one of my strongest engineering skills: making complexity usable. I designed and delivered learning experiences that turned abstract concepts into practical outcomes.",
+    "focus": "Technical communication, curriculum design, and structured problem solving with diverse learner groups.",
+    "tags": ["Teaching", "Curriculum Design", "STEM", "Mentorship", "Problem Solving"],
     "highlights": [
-      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
-      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
-      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
-    ]
+      "Built and delivered an engineering curriculum for students aged 13-18, balancing rigor with hands-on creativity.",
+      "Guided learners through practical projects from self-propelled systems to bridge design and game development.",
+      "Strengthened the ability to explain difficult concepts in a way teams can execute quickly."
+    ],
+    "behindTheScenes": "This role improved how I structure technical communication by starting from intent, reducing jargon, and defining the next concrete action."
   },
   {
     "role": "Career Break",
-    "company": "N/A",
+    "company": "Personal Development",
     "period": "Feb 2023 - Jun 2023",
+    "summary": "I used this period as a deliberate reset rather than a pause. I invested in ML foundations while teaching abroad and broadening my problem-solving perspective.",
+    "focus": "Structured upskilling in machine learning and data science, with deliberate practice on applied projects.",
+    "tags": ["Learning", "Travel", "Machine Learning", "Data Science"],
     "highlights": [
-      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
-      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
-      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
-    ]
+      "Completed focused ML and data science study to build stronger mathematical and implementation fundamentals.",
+      "Applied learning through practical work and teaching, improving adaptability and communication under changing conditions."
+    ],
+    "behindTheScenes": "This chapter strengthened consistency and self-direction, habits that later made it easier to ship under pressure in industry roles."
   },
   {
     "role": "Commodities Broker",
     "company": "Veblen Collectables",
     "period": "Aug 2021 - Feb 2023",
+    "summary": "My early career was in markets where uncertainty was constant and decisions were public. I worked in high-pressure trading environments where research quality, timing, and trust directly shaped outcomes.",
+    "focus": "Decision-making under uncertainty, stakeholder management, and disciplined market analysis.",
+    "tags": ["Research", "Negotiation", "Client Strategy", "Decision Making", "Market Analysis"],
     "highlights": [
-      "Designed end-to-end data pipelines in Python to enable live sports event coverage at one-tenth of previous costs.",
-      "Built and curated a proprietary dataset for model training and benchmarking, achieving state-of-the-art detection performance.",
-      "Implemented performance monitoring infrastructure to identify system bottlenecks, then optimised processing pipelines, reducing latency by 60%."
-    ]
+      "Managed a portfolio of high-value assets with disciplined research and strategy-led decision making.",
+      "Built strong client trust through clear communication and consistent delivery in volatile conditions.",
+      "Developed calm, structured execution habits that transfer well to production engineering and ML operations."
+    ],
+    "behindTheScenes": "This experience shaped my approach to engineering trade-offs: evaluate risk, communicate clearly, and commit decisively when timing matters."
   }
 ]

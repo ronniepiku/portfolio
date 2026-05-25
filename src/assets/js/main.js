@@ -38,26 +38,6 @@ function initScrollReveal() {
     });
 }
 
-// Skill Bar Animations
-function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-bar');
-
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                skillObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    skillBars.forEach(bar => {
-        skillObserver.observe(bar);
-    });
-}
-
 // Active Navigation Highlighting
 function initActiveNav() {
     const sections = document.querySelectorAll('section[id]');
@@ -224,7 +204,6 @@ function initCursorGlow() {
 document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initScrollReveal();
-    initSkillBars();
     initActiveNav();
     initSmoothScroll();
     initTypingAnimation();

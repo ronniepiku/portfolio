@@ -1,43 +1,78 @@
 [
   {
-    "title": "Towards Simulation-to-Reality Transfer in EIT Tactile Sensing",
-    "slug": "eit-sim2real",
-    "description": "Noise-augmented deep learning for sim-to-real transfer in EIT tactile sensing. Uses simulated data and domain randomisation to improve robustness, reduce data needs, and enable accurate real-world tactile reconstruction for robotic perception.",
+    "title": "MatchMind",
+    "subtitle": "From event data to match-winning insight",
+    "slug": "matchmind",
+    "description": "A football intelligence platform that turns raw event feeds into practical coaching and scouting decisions.",
+    "storyHook": "Coaches need answers quickly, not more dashboards. MatchMind compresses hours of manual analysis into fast, decision-ready outputs.",
+    "impact": "Built to reduce analysis turnaround from hours to minutes for repeatable match workflows.",
+    "status": "Production-style build",
+    "confidentiality": "Public repository",
+    "media": {
+      "type": "image",
+      "src": "/assets/projects/matchmind/cover.svg",
+      "alt": "MatchMind project cover with football analytics concept"
+    },
     "tags": [
       "Python",
-      "Machine Learning",
-      "Data Science",
-      "Plotly"
-    ],
-    "links": {
-      "caseStudy": "/projects/eit-sim2real/",
-      "github": "https://github.com/ronniepiku/eit-sim2real"
-    }
-  },
-  {
-    "title": "MatchMind",
-    "slug": "matchmind",
-    "description": "Machine learning-driven football analysis suite for player and team performance evaluation, tactical benchmarking, competitor scouting, and advanced xG modelling using StatBoost.",
-    "tags": [
-      "Machine Learning",
-      "Data Science",
-      "Docker",
-      "CI/CD"
+      "SQL",
+      "Data Pipelines",
+      "Plotly Dash",
+      "Performance Analysis"
     ],
     "links": {
       "caseStudy": "/projects/matchmind/",
-      "github": "https://github.com/ronniepiku/MatchMind"
+      "github": "https://github.com/ronniepiku/MatchMind",
+      "demo": "https://github.com/ronniepiku/MatchMind#quick-start"
+    }
+  },
+  {
+    "title": "Towards Simulation-to-Reality Transfer in EIT Tactile Sensing",
+    "subtitle": "Teaching models to handle real-world sensor noise",
+    "slug": "eit-sim2real",
+    "description": "A sim-to-real learning project that improves tactile sensing reliability by training models on realistic noise patterns before deployment.",
+    "storyHook": "Real sensors are messy. This work explores how noise-aware training can make tactile ML systems more robust before they ever touch live hardware.",
+    "impact": "Reduced dependence on expensive real-world data collection while improving transfer robustness.",
+    "status": "Research project",
+    "confidentiality": "Public repository",
+    "media": {
+      "type": "image",
+      "src": "/assets/projects/eit-sim2real/cover.svg",
+      "alt": "EIT Sim2Real project cover with tactile sensing visualization"
+    },
+    "tags": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "Robotics",
+      "Sim2Real"
+    ],
+    "links": {
+      "caseStudy": "/projects/eit-sim2real/",
+      "github": "https://github.com/ronniepiku/eit-sim2real",
+      "demo": "https://github.com/ronniepiku/eit-sim2real/blob/main/notebooks/eda_analysis.ipynb"
     }
   },
   {
     "title": "AlphaScreen",
+    "subtitle": "AI-assisted equity research workflow",
     "slug": "alphascreen",
-    "description": "AlphaScreen is a state-of-the-art equity research tool embeded with your own specialised AI equity research assistant. Rank, backtest and evaluate stocks across global markets.",
+    "description": "A desktop research assistant that helps users screen, compare, and investigate global equities with explainable AI support.",
+    "storyHook": "AlphaScreen is designed for fast conviction: less time wrestling fragmented data, more time validating investment hypotheses.",
+    "impact": "Built to make multi-factor equity research workflows faster, clearer, and easier to repeat.",
+    "status": "Private product",
+    "confidentiality": "Private codebase",
+    "media": {
+      "type": "image",
+      "src": "/assets/projects/alphascreen/cover.svg",
+      "alt": "AlphaScreen project cover with equity research interface concept"
+    },
     "tags": [
       "Agentic Workflows",
       "Python",
       "NLP",
-      "LLMs"
+      "LLMs",
+      "FinTech"
     ],
     "links": {
       "caseStudy": "/projects/alphascreen/"

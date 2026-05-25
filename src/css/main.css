@@ -93,31 +93,6 @@
     transform: scale(2);
   }
 
-  /* Skill bar animation */
-  .skill-bar {
-    position: relative;
-    height: 4px;
-    background: theme('colors.surface.700');
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .skill-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: linear-gradient(90deg, #3b8eff, #8ecdff);
-    border-radius: 2px;
-    width: 0%;
-    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .skill-bar.animate::after {
-    width: var(--skill-level, 85%);
-  }
-
   /* Prose overrides for case study content */
   .prose-brand a {
     color: theme('colors.brand.400');
@@ -138,6 +113,49 @@
     color: theme('colors.gray.100');
   }
 
+  .prose-brand p {
+    color: theme('colors.gray.200');
+    line-height: 1.8;
+    margin: 1rem 0;
+  }
+
+  .prose-brand ul,
+  .prose-brand ol {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.5rem;
+    color: theme('colors.gray.200');
+  }
+
+  .prose-brand ul {
+    list-style: disc;
+  }
+
+  .prose-brand ol {
+    list-style: decimal;
+  }
+
+  .prose-brand li {
+    margin: 0.5rem 0;
+    padding-left: 0.25rem;
+  }
+
+  .prose-brand li::marker {
+    color: theme('colors.brand.300');
+  }
+
+  .prose-brand strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  .prose-brand blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid theme('colors.brand.500');
+    color: theme('colors.gray.300');
+    font-style: italic;
+  }
+
   .prose-brand code {
     color: theme('colors.brand.300');
     background: theme('colors.surface.700');
@@ -150,11 +168,65 @@
     background: theme('colors.surface.800');
     border: 1px solid theme('colors.surface.600');
     border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
   }
 
   .prose-brand img {
     border-radius: 0.75rem;
     border: 1px solid theme('colors.surface.600');
+  }
+
+  .prose-brand table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid theme('colors.surface.600');
+  }
+
+  .prose-brand thead {
+    background: theme('colors.surface.800');
+  }
+
+  .prose-brand th,
+  .prose-brand td {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid theme('colors.surface.700');
+  }
+
+  .prose-brand th {
+    color: white;
+    font-weight: 600;
+  }
+
+  .prose-brand td {
+    color: theme('colors.gray.200');
+  }
+
+  .prose-brand hr {
+    border: 0;
+    border-top: 1px solid theme('colors.surface.700');
+    margin: 2rem 0;
+  }
+
+  /* Experience timeline marker states */
+  .exp-marker {
+    background: rgba(142, 205, 255, 0.45);
+  }
+
+  .exp-marker--current {
+    background: #3b8eff;
+    box-shadow: 0 0 0 1px rgba(59, 142, 255, 0.35), 0 0 22px rgba(59, 142, 255, 0.45);
+    animation: pulse-glow 2.2s ease-in-out infinite;
+  }
+
+  .exp-marker--past {
+    background: rgba(142, 205, 255, 0.55);
+    box-shadow: 0 0 0 1px rgba(142, 205, 255, 0.2);
   }
 }
 
@@ -235,4 +307,22 @@
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, #3b8eff, #8ecdff);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .hover-lift,
+  .hover-lift:hover {
+    transition: none;
+    transform: none;
+  }
+
+  .exp-marker--current {
+    animation: none;
+  }
 }

@@ -1,101 +1,101 @@
 [
   {
-    "category": "Languages & Frameworks",
+    "category": "Programming & Data Stack",
+    "narrative": "Core language and framework foundations for building analytical systems and production ML services.",
     "items": [
       {
         "name": "Python",
-        "icon": "🐍",
-        "level": 95
+        "icon": "🐍"
       },
       {
         "name": "SQL",
-        "icon": "🗄️",
-        "level": 90
+        "icon": "🗄️"
       },
       {
-        "name": "pandas / NumPy",
-        "icon": "📊",
-        "level": 92
+        "name": "Pandas / NumPy",
+        "icon": "📊"
       },
       {
         "name": "Plotly",
-        "icon": "📈",
-        "level": 88
+        "icon": "📈"
       }
     ]
   },
   {
     "category": "Machine Learning & AI",
+    "narrative": "Applied ML skills across the full lifecycle, from feature design to reliable production delivery.",
     "items": [
       {
         "name": "Computer Vision",
-        "icon": "👁️",
-        "level": 85
+        "icon": "👁️"
       },
       {
-        "name": "NLP",
-        "icon": "💬",
-        "level": 80
+        "name": "LLMs",
+        "icon": "💬"
       },
       {
         "name": "Statistical Modelling",
-        "icon": "📐",
-        "level": 87
+        "icon": "📐"
       },
       {
         "name": "ML Libraries (scikit-learn, PyTorch)",
-        "icon": "🤖",
-        "level": 90
+        "icon": "🤖"
+      },
+      {
+        "name": "Feature Engineering",
+        "icon": "🧩"
+      },
+      {
+        "name": "Model Evaluation & Validation",
+        "icon": "✅"
       }
     ]
   },
   {
     "category": "Data & Analytics",
+    "narrative": "Decision-focused analytics and data foundations that scale from exploration to production.",
     "items": [
       {
         "name": "Data Analysis & Visualisation",
-        "icon": "📉",
-        "level": 93
+        "icon": "📉"
       },
       {
         "name": "Data Pipelines",
-        "icon": "🔁",
-        "level": 88
+        "icon": "🔁"
       },
       {
         "name": "Performance Reporting",
-        "icon": "📋",
-        "level": 90
+        "icon": "📋"
       },
       {
-        "name": "Trend Identification",
-        "icon": "🔍",
-        "level": 85
+        "name": "Database Design & Query Optimization",
+        "icon": "🗃️"
       }
     ]
   },
   {
     "category": "DevOps & Tools",
+    "narrative": "MLOps and engineering practices that keep systems deployable, observable, and resilient.",
     "items": [
       {
         "name": "Docker",
-        "icon": "🐳",
-        "level": 82
+        "icon": "🐳"
       },
       {
         "name": "CI/CD (GitHub Actions)",
-        "icon": "⚙️",
-        "level": 85
+        "icon": "⚙️"
       },
       {
         "name": "Git",
-        "icon": "🔀",
-        "level": 90
+        "icon": "🔀"
       },
       {
         "name": "Agentic Workflows",
-        "icon": "🤝",
-        "level": 75
+        "icon": "🤝"
+      },
+      {
+        "name": "Model Deployment & Serving",
+        "icon": "🚀"
       }
     ]
   }
